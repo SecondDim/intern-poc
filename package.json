@@ -1,0 +1,56 @@
+{
+  "name": "internet-of-car-poc",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "start:dev": "nodemon --watch src -e ts,tsx --exec ts-node src/server.ts",
+    "start": "npm run serve",
+    "build-ts": "tsc",
+    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
+    "serve": "node dist/server.js",
+    "build": "npm run lint && npm run build-ts",
+    "test": "exit 1;"
+  },
+  "engines": {
+    "node": "12.x.x",
+    "npm": "6.x.x"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/cron": "^1.7.2",
+    "@types/koa": "2.0.49",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa__cors": "^3.0.1",
+    "@types/koa__router": "^8.0.2",
+    "@types/node": "^12.12.53",
+    "@types/shelljs": "^0.8.8",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.4",
+    "shelljs": "^0.8.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^8.0.8",
+    "class-validator": "^0.11.1",
+    "cron": "^1.8.2",
+    "dotenv": "^8.2.0",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-swagger-decorator": "^1.6.8",
+    "pg": "^7.12.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.25",
+    "winston": "^3.3.3"
+  }
+}
