@@ -1,5 +1,5 @@
 {
-  "name": "internet-of-car-poc",
+  "name": "private-data-poc",
   "version": "0.0.1",
   "description": "",
   "main": "dist/server.js",
